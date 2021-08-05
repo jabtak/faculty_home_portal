@@ -1,0 +1,73 @@
+<mat-sidenav-container autosize>
+    <mat-sidenav #sidenav mode="side" opened="true">
+      <mat-nav-list>
+        <div class="left-bg">
+        <mat-list-item>
+           
+          <mat-icon mat-list-icon class="chevron-button sidenav-button" (click)="isExpanded = !isExpanded" [ngClass]="{'rotated': isExpanded}">chevron_right</mat-icon>
+        </mat-list-item>
+         </div>
+      
+
+        <mat-list-item  [routerLink]="'dashboard'" (click)="editfaculty(facultyinfo)">
+          <mat-icon mat-list-icon >home</mat-icon>
+          <span *ngIf="isExpanded">Dashboard</span>
+          <mat-icon mat-list-icon class="chevron-button1 sidenav-button" (click)="isExpanded1 = !isExpanded1" [ngClass]="{'rotated': isExpanded1}">chevron_right</mat-icon>
+        </mat-list-item>
+  
+        <mat-list-item [routerLink]="'editfacultyprofile'">
+         
+          <mat-icon mat-list-icon>important_devices</mat-icon>
+          <span *ngIf="isExpanded">Messages</span>  
+          <mat-icon mat-list-icon class="chevron-button1 sidenav-button" (click)="isExpanded1 = !isExpanded1" [ngClass]="{'rotated': isExpanded1}">chevron_right</mat-icon>
+         
+        
+        </mat-list-item>
+        <mat-list-item >
+          <mat-icon mat-list-icon>supervisor_account</mat-icon>
+          <span *ngIf="isExpanded">INFO
+          
+          </span>  
+         
+          
+          <mat-icon mat-list-icon class="chevron-button1 sidenav-button" (click)="isExpanded1 = !isExpanded1" [ngClass]="{'rotated': isExpanded1}">chevron_right</mat-icon>
+        </mat-list-item>
+
+  
+        <mat-list-item>
+          <mat-icon mat-list-icon>supervisor_account</mat-icon>
+          <span *ngIf="isExpanded">Job post</span>
+          <mat-icon mat-list-icon class="chevron-button1 sidenav-button" (click)="isExpanded1 = !isExpanded1" [ngClass]="{'rotated': isExpanded1}">chevron_right</mat-icon>
+        </mat-list-item>
+  
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <div class="content">
+      <mat-toolbar>
+      
+        <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container position-relative">
+      
+      <p style="font-size: 114px;color: white;padding-top: 357px;">We Are</p><br>
+      <p style="font-size: 113px;color: white;padding-top: 37px;">Here</p><br>
+      <p style="font-size: 95px;padding-top: 28px;color:white;">For You!</p><br>
+     
+      <p style="font-size: 43px;padding-top: 76px;color: darkseagreen;">Passion is the difference between having a Career and having a Job</p><br>
+      <img src="/assets/img/work3.png" style="width: 1296px; height: 410px;">
+    </div>
+  </section><!-- End Hero -->
+
+ 
+      </mat-toolbar>
+      <div>
+        <img src="/assets/img/work3.png">
+       </div>
+        
+        
+      
+        
+      <router-outlet></router-outlet>
+    </div>
+  
+  </mat-sidenav-container>
